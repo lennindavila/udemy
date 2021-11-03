@@ -1,0 +1,390 @@
+{
+	"info": {
+		"_postman_id": "cc62d6f7-c207-41a9-99da-c5dedcbb743d",
+		"name": "Springboot-backend-apirest",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "clientes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/clientes",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"clientes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Heroku clientes",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://spring-boot2-heroku-lennin.herokuapp.com/api/clientes",
+					"protocol": "https",
+					"host": [
+						"spring-boot2-heroku-lennin",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"clientes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Filtrar Productos by Nombre",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/facturas/filtrar-productos/bianchi",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"facturas",
+						"filtrar-productos",
+						"bianchi"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "clientes lista paginado",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/clientes/page/0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"clientes",
+						"page",
+						"0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "clientes lista paginado auth",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/clientes/page/0",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"clientes",
+						"page",
+						"0"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "clientes regiones",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/clientes/regiones",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"clientes",
+						"regiones"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "upload",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "archivo",
+							"type": "file",
+							"src": "/L:/OneDrive/Documentos/Personal/Mujeres/Mishel Angie Perez Sevillano/26908114_134477564027539_8382097057884818235_n.jpg"
+						},
+						{
+							"key": "id",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/clientes/upload",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"clientes",
+						"upload"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "clientes by Id",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpbmZvIGFkaWNpb25hbCI6IkhvbGEgcXVlIHRhbCE6IGxlbm5pbiIsInVzZXJfbmFtZSI6Imxlbm5pbiIsInNjb3BlIjpbInJlYWQiLCJ3cml0ZSJdLCJhcGVsbGlkbyI6ImRhdmlsYSIsImV4cCI6MTYxNzA0NTk2Miwibm9tYnJlIjoibGVubmluIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9VU0VSIl0sImp0aSI6ImU1MmRmYmQzLWEyMmUtNDZlMi05ZDUzLTFlMjZkZTEyYjNiZSIsImVtYWlsIjoibGVubmluMTJAaG90bWFpbC5jb20iLCJjbGllbnRfaWQiOiJhbmd1bGFyYXBwIn0.ViYC501vqUZRoSP5PuiCnkxzWq6DoX2wHi2NKi4gwuMT-4qEAKtgxqc8Lq8dojnazG91UKoWZUneDvFZWeKHwoFI5fkGL4FF25n1fTZ09DDqkLJU91EyXFE9tVzJA8A23Xven0s4B5_qu7_1obEgeeu5h-StcjqHJtphKl9On6dd7RD5Mu-P8ly4eSX-Jc093sIYon1qmU0O4gpXlwa5S5MTQKFyU64iqObN8YaS7StkCg0jovWy96gtO-KfCTJGJ7axdT4QvrnQ6nHsjQKpnAlknaXSizG62bdVrWwIsy2oaZt0jATznd84uWTj9Cccje6RB9RwKqHFgDkZyzt18A",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/clientes/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"clientes",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Factura by Id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/facturas/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"facturas",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "cliente create",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpbmZvIGFkaWNpb25hbCI6IkhvbGEgcXVlIHRhbCE6IGxlbm5pbiIsInVzZXJfbmFtZSI6Imxlbm5pbiIsInNjb3BlIjpbInJlYWQiLCJ3cml0ZSJdLCJhcGVsbGlkbyI6ImRhdmlsYSIsImV4cCI6MTYxNjY0NTQ1NCwibm9tYnJlIjoibGVubmluIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9VU0VSIl0sImp0aSI6IjVkNzZlNzQ4LTBhN2EtNGJlMy04MDMzLWMzYmJjZDNiZjEwOSIsImVtYWlsIjoibGVubmluMTJAaG90bWFpbC5jb20iLCJjbGllbnRfaWQiOiJhbmd1bGFyYXBwIn0.xTxAltPpNRB1XKAaywMCzFRPwrs27fAqlj26X4GqPNi_QM09-dRNb2PN9Lfu4U8Wqa_KAiZUFex4CeGgZhXu2-uai46Z1alBaLBLUtPMqL0cWb_R80zrxKj-Ov_pKWed6FBVcOGnO0ScIrbbiFR1Q7ocp7J1kT60opDpfmgQVv54l1uvytKpPl2ZDrKd1QaFO3H7Sl2yEpWqOKDvdc6N55YCNoNTJTSj_-T4PHVcrO48P98UwyENnXUDcFri7JNu9Zti2ahbb96mWUqHMmNrK0QJMSkNG1N_6SUaYsdZHSu_jeAN8Jt8DbKD2cBkMykj5Gt9eXYUzLjEPL2-iCcRnA",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n        \"nombre\": \"Angel\",      \r\n        \"apellido\": \"Rush\",  \r\n        \"email\": \"Angel.Rush@gmail.com\",\r\n        \"createAt\": \"2021-01-01\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/clientes/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"clientes",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "auth token",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "password",
+							"value": "12345",
+							"type": "string"
+						},
+						{
+							"key": "username",
+							"value": "angularapp",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "username",
+							"value": "lennin",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "12345",
+							"type": "text"
+						},
+						{
+							"key": "grant_type",
+							"value": "password",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/oauth/token",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"oauth",
+						"token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "cliente update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n        \"nombre\": \"bildo\",\r\n        \"apellido\": \"baggins\",\r\n        \"email\": \"bildo@gmail.com\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/clientes/8",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"clientes",
+						"8"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "cliente delete",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJpbmZvIGFkaWNpb25hbCI6IkhvbGEgcXVlIHRhbCE6IGFkbWluIiwidXNlcl9uYW1lIjoiYWRtaW4iLCJzY29wZSI6WyJyZWFkIiwid3JpdGUiXSwiYXBlbGxpZG8iOiJhZG0iLCJleHAiOjE2MTY2NDUzMzQsIm5vbWJyZSI6ImFkbSIsImF1dGhvcml0aWVzIjpbIlJPTEVfQURNSU4iLCJST0xFX1VTRVIiXSwianRpIjoiMmIzZTMwNzEtMWI5ZS00OGIyLWJhNDktMjBiZjExNWI1MjA1IiwiZW1haWwiOiJhZG1AaG90bWFpbC5jb20iLCJjbGllbnRfaWQiOiJhbmd1bGFyYXBwIn0.v55BLtJVUidPss1QFWKIimqr3Kbr1aok4Vn9nZ4e6p8OZXrLz8SfrWijPbGyEBIysn69GCBoGX_PW0eByFZSnXN69eKUvErSKzTiEDFr-7QUaE6ba8_cdUwY0V7xN0EGSNNQV7-Vv2vPdrJ_tHx8icYG2GMvWq4AhNxuZoDHCWtECDr9MTQUSVl_s_f8dB7-nZG-dQnPpuIL1HSRAKkUYd2yphx6gxDG52gQ_x3w7iumeuUvCSBtw3FY7Jnht5SkWHEN-7YNt_5IyFRyCsK2eGVHZcuMcdFJgrC-QWNUqYoww8YiqVZCE2_swLhsOHhkRCgTgj-qqCqOHbIN2OcB6w",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n        \"nombre\": \"bildo\",\r\n        \"apellido\": \"baggins\",\r\n        \"email\": \"bildo@gmail.com\"\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/clientes/7",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"clientes",
+						"7"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

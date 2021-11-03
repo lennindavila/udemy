@@ -1,0 +1,8 @@
+Levantar primero
+	config-server
+	eureka
+	oauth
+	usuarios
+	productos
+	items
+	zuul

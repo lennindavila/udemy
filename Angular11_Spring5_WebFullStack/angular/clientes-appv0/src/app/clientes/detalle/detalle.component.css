@@ -1,0 +1,24 @@
+.abrir-modal{
+  background-color: rgba(0,0,0,0.7);
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+}
+
+.animacion{
+  animation-duration: 2s; /*para firefox*/
+  animation-fill-mode: both; /*para firefox*/
+  -webkit-animation-duration: 2s; /*para chrome y safari se agrega -webkit- aunque firefox tambien lo toma*/
+  -webkit-animation-fill-mode: both; /*para chrome y safari se agrega -webkit-  aunque firefox tambien lo toma*/
+}
+
+.fadeIn{
+  animation-name: fadeIn;
+  -webkit-animation-name: fadeIn;
+}
+
+@Keyframes fadeIn {0% {opacity: 0}to{opacity: 1}}
+@-webkit-Keyframes fadeIn {0% {opacity: 0}to{opacity: 1}}

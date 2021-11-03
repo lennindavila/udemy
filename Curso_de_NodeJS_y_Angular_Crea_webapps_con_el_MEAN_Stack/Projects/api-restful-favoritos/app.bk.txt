@@ -1,0 +1,42 @@
+'use strict'
+
+let express = require('express');
+let bodyParser = require('body-parser');
+let app = express();
+
+
+app.use(bodyParser.urlencoded({extended:false}));
+app.use(bodyParser.json());
+
+//sin parametro
+app.get('/prueba0/', function(req,res){
+    res.status(200).send({data:[1,2,3,4], 
+                          message: "Hola mundo con NodeJs y Express"});
+});
+
+//con parametro opcional gracias al ?
+app.get('/prueba1/:nombre?', function(req,res){
+    res.status(200).send({data:[1,2,3,4], 
+                          message: "Hola mundo con NodeJs y Express"});
+});
+
+//con parametro
+app.get('/prueba2/:nombre', function(req,res){
+    var nombre = req.params.nombre;
+    res.status(200).send({data:[1,2,3,4], 
+                          message: "Hola mundo con NodeJs y Express " + nombre });
+});
+
+//con funcion flecha
+app.get('/prueba3/:nombre?', (req,res) => {
+    
+    if(req.params.nombre){
+        var nombre = req.params.nombre;
+    }else{
+        var nombre = "Sin nombre";
+    }
+    res.status(200).send({data:[1,2,3,4], 
+                          message: "Hola mundo con NodeJs y Express " + nombre });
+});
+
+module.exports = app;

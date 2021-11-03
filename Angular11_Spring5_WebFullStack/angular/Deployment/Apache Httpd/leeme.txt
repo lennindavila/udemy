@@ -1,0 +1,1 @@
+Copiar en htdocs del servidor la carpeta "clientes-app"

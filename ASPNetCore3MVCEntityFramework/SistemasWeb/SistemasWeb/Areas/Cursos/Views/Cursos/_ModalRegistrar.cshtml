@@ -1,0 +1,100 @@
+﻿@model DataPaginador<TCursos>
+<div class="modal fade" data-backdrop="static" id="modalRegistrar" tabindex="-1" role="dialog"
+     aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="myModalLabel">Agregar curso</h4>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <form method="post">
+                <div class="modal-body">
+                    <div class="form-horizontal">
+                        <center>
+                            <div class="form-group">
+                                <div class=" col-md-5">
+                                    <a class="thumbnail">
+                                        <output id="cursoImage">
+                                            <img src="~/Images/logo-google.png" class="cursoImage" />
+                                        </output>
+                                    </a>
+                                </div>
+                            </div>
+                            <div class="form-group btn btn-success text-light">
+                                <label for="files">Cargar foto</label>
+                                <div class="col-md-10">
+                                    <input asp-for="AvatarImage" accept="image/*" class="file-input" type="file" id="files">
+                                </div>
+                            </div>
+                        </center>
+                        <div class="form-group">
+                            <div class="row">
+                                <label asp-for="Input.Curso" class="col-md-2 control-label"></label>
+                                <div class="col-md-10">
+                                    <input asp-for="Input.Curso" placeholder="Nombre" id="curNombre" class="form-control" />
+                                    <span asp-validation-for="Input.Curso" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <label asp-for="Input.Informacion" class="col-md-2 control-label"></label>
+                                <div class="col-md-10">
+                                    <input asp-for="Input.Informacion" id="curDescripcion" placeholder="Descripcion" class="form-control" />
+                                    <span asp-validation-for="Input.Informacion" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <label asp-for="Input.Horas" class="col-md-2 control-label"></label>
+                                <div class="col-md-10">
+                                    <input asp-for="Input.Horas" id="curHoras" placeholder="Horas" class="form-control" />
+                                    <span asp-validation-for="Input.Horas" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <label asp-for="Input.Costo" class="col-md-2 control-label"></label>
+                                <div class="col-md-10">
+                                    <input asp-for="Input.Costo" id="curCosto" placeholder="Costo" class="form-control" />
+                                    <span asp-validation-for="Input.Costo" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <label asp-for="Input.Estado" class="col-md-2 control-label"></label>
+                                <div class="col-md-10">
+                                    <input asp-for="Input.Estado" id="curEstado" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="row">
+                                <label asp-for="Input.Categoria" class="col-md-2 control-label"></label>
+                                <div class="col-md-10">
+                                    @Html.DropDownListFor(x => Model.Input.CategoriaID,
+                                   new SelectList(Model.Categorias, "Value", "Text"), "Seleccione una categoria",
+                                   htmlAttributes: new { @class = "form-control", id = "curCatargoria" })
+                                    <span asp-validation-for="Input.CategoriaID" class="text-danger"></span>
+                                </div>
+                            </div>
+                        </div>
+                        <span id="mensaje" class=" text-danger"></span>
+                        <input type="text" required class="hidenn" />
+                        <input asp-for="Input.CursoID" id="curCursoID" class="hidenn" />
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Cancelar</button>
+                    <button type="submit" onclick="curso.RegistrarCurso()" class="btn btn-primary">Guardar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+

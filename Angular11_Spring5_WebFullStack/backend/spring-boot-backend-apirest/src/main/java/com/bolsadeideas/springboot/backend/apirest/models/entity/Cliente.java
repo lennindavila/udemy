@@ -36,10 +36,11 @@ public class Cliente implements Serializable {
 
 	@NotEmpty(message = "no puede estar vacio")
 	@Size(min = 4, max = 12, message = "el tamano tiene que estar entre 4 y 12")
-	@Column(nullable = false)
+	@Column(nullable = false,length=500)
 	private String nombre;
 
 	@NotEmpty(message = "no puede estar vacio")
+	@Column(columnDefinition="TEXT",length=65000)
 	private String apellido;
 
 	@NotEmpty(message = "no puede estar vacio")
